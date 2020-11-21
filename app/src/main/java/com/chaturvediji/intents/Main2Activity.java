@@ -15,14 +15,14 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         tv=findViewById(R.id.textView);
 
-//        Bundle myBundle=getIntent().getExtras();
-//        while(myBundle!=null){
-//            String myecho=myBundle.getString("name");
-//        Toast.makeText(Main2Activity.this,"Second Activity",Toast.LENGTH_LONG).show();
-//            tv.setText(myecho);
-//        }
-        String name=getIntent().getStringExtra("name");
-        tv.setText(name);
+        Bundle myBundle=getIntent().getExtras();
+        if(myBundle!=null){
+            String myecho=myBundle.getString("name");
         Toast.makeText(Main2Activity.this,"Second Activity",Toast.LENGTH_LONG).show();
+            tv.setText(myecho);
+        }
+//        String name=getIntent().getStringExtra("name");
+//        tv.setText(name);
+//        Toast.makeText(Main2Activity.this,"Second Activity",Toast.LENGTH_LONG).show();
     }
 }
